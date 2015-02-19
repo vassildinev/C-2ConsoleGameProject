@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 /// <summary>
 /// Enemy class creates an enemy entity that
-/// will attack  player if 
+/// will move vertically or horizontaly.
 /// </summary>
 
 public enum EnemySize { SMALL = 0, BIG = 1, BOSS = 2 };
 
 class Enemy
 {
-
-
     //FIELDS
     private int scorePoints; // points added to player total score when enemy dies
     private int healthPoints;// number of points to be alive
@@ -23,7 +21,10 @@ class Enemy
     private EnemySize enemyTypeSize;// will determine which enemy to print
     private int enemyHeight; // enemy printed lines
     private int enemyWidth; // enemy characters length per line
-   
+    private int distance; // number of steps for movement
+    private int steps; //distance  moved by enemy
+    private bool right; //direction right or left
+    private bool up;   //direction up or down
 
 
     //PROPERTIES
@@ -35,36 +36,25 @@ class Enemy
     public EnemySize EnemyTypeSize { get { return enemyTypeSize; } set { enemyTypeSize = value; } }
     public int EnemyWidth { get { return enemyHeight; } set { enemyHeight = value; } }
     public int EnemyHeight { get { return enemyWidth; } set { enemyWidth = value; } }
-
+    public int Distance { get { return distance; } set { distance = value; } }
+    public int Steps { get { return steps; } set { steps = value; } }
+    public bool Right { get { return right; } set { right = value; } }
+    public bool Up { get { return up; } set { up = value; } }
 
     //CONSTRUCTORS
-    /// <summary>
-    /// Creates a small enemy on teh top left corner of the console
-    /// </summary>
-    public Enemy()
-    {
-        ScorePoints = 1;
-        HealthPoints = 1;
-        IsDead = false;
-        PosX = 0;
-        PosY = 0;
-        EnemyTypeSize = EnemySize.SMALL;
-        // set height and width
 
-        EnemyHeight = 1;
-        EnemyWidth = 6;
-
-    }
-    /// <summary>
-    /// Creates any type of enemy, at the given position
-    /// </summary>
-    /// <param name="score"></param>
-    /// <param name="health"></param>
-    /// <param name="dead"></param>
-    /// <param name="posX"></param>
-    /// <param name="posY"></param>
-    /// <param name="typeSize"></param>
-    public Enemy(int score, int health, bool dead, int posX, int posY, EnemySize typeSize)
+   /// <summary>
+   /// Creates an enemy at the given position and sets it's
+   /// distance of movement
+   /// </summary>
+   /// <param name="score"> the points addedt to the players total score when enemy is dead</param>
+   /// <param name="health"> number of hits to be killed</param>
+   /// <param name="dead"> returs true if health is less or equal to 0</param>
+   /// <param name="posX"> position on x to print the enemy</param>
+   /// <param name="posY"> position on y to priont the enemy</param>
+   /// <param name="typeSize"> size of the enemy</param>
+   /// <param name="distance"> total number of steps enemy will move</param>
+    public Enemy(int score, int health, bool dead, int posX, int posY, EnemySize typeSize, int distance)
     {
         ScorePoints = score;
         HealthPoints = health;
@@ -72,8 +62,9 @@ class Enemy
         PosX = posX;
         PosY = posY;
         EnemyTypeSize = typeSize;
+        Distance = distance;
 
-        // set height and width
+        // set height and width for collision checks
         if (EnemyTypeSize == EnemySize.SMALL)
         {
             EnemyHeight = 1;
@@ -90,15 +81,16 @@ class Enemy
             EnemyWidth = 8;
         }
         //initialize directions for bounce movement
-        
+        Steps = 0;
+        Right = false;
+        Up = false;
     }
 
     //METHODS
 
     /// <summary>
     /// Prints a different enemy style, depending on the Enemy Size
-    /// at the given console position if any is given. Else will
-    /// print it in the left top corner
+    /// at the given console position.
     /// </summary>
     public void PrintEnemy()
     {
@@ -126,62 +118,63 @@ class Enemy
                 Console.CursorLeft = PosX;
                 Console.WriteLine("\\/---\\/");
                 break;
-            default:
+            default://print a small enemy
                 Console.CursorTop = PosY;
                 Console.CursorLeft = PosX;
-                Console.WriteLine("|o`_´o|");//print a small enemy
+                Console.WriteLine("|o`_´o|");
                 break;
         }
     }
 
-    int steps = 0;
-    int right = 0;
-    int up = 0;
-
+    /// <summary>
+    /// Moves enemy horizontally in a total of steps equals to distance
+    /// </summary>
     public void EnemyBounceHorizontal()
     {
-        
-        if (steps <= 4 && right == 0)
+        if (Steps <= Distance && Right == false)
         {
             Console.CursorLeft = PosX--;
-            steps++;
-            if (steps == 4)
+            Steps++;
+            if (Steps == Distance)
             {
-                right = 1;
+                Right = true;
             }
         }
        
-        
-        if(steps >= 0 && right == 1)
+        if(Steps >= 0 && Right == true)
         {
             Console.CursorLeft = PosX++;
-            steps--;
-            if (steps == 0)
+            Steps--;
+            if (Steps == 0)
             {
-                right = 0;
+                Right = false;
             }
         }
 
         PrintEnemy();
     }
+    /// <summary>
+    /// Moves enemy vertically in a total of steps equal to distance
+    /// </summary>
     public void EnemyBounceVertical()
     {
-        if (steps <= 4 && up == 0)
+        if (Steps <= Distance && Up == false)
         {
             Console.CursorLeft = PosY--;
-            steps++;
-            if (steps == 4)
+            Steps++;
+            if (Steps == Distance)
             {
-                up = 1;
+                Up = true;
             }
         }
-        if (steps >= 0 && up == 1)
+
+        if (Steps >= 0 && Up == true)
         {
             Console.CursorLeft = PosY++;
-            steps--;
-            if (steps == 0)
+            Steps--;
+            if (Steps == 0)
             {
-                up = 0;
+                Up = false;
             }
         }
 
