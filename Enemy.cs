@@ -92,7 +92,7 @@ class Enemy
     /// Prints a different enemy style, depending on the Enemy Size
     /// at the given console position.
     /// </summary>
-    public void PrintEnemy()
+    public void Print()
     {
         switch (EnemyTypeSize)
         {
@@ -129,7 +129,7 @@ class Enemy
     /// <summary>
     /// Moves enemy horizontally in a total of steps equals to distance
     /// </summary>
-    public void EnemyBounceHorizontal()
+    public void BounceHorizontal()
     {
         if (Steps <= Distance && Right == false)
         {
@@ -151,12 +151,12 @@ class Enemy
             }
         }
 
-        PrintEnemy();
+        Print();
     }
     /// <summary>
     /// Moves enemy vertically in a total of steps equal to distance
     /// </summary>
-    public void EnemyBounceVertical()
+    public void BounceVertical()
     {
         if (Steps <= Distance && Up == false)
         {
@@ -178,7 +178,7 @@ class Enemy
             }
         }
 
-        PrintEnemy();
+        Print();
     }
 }
 
