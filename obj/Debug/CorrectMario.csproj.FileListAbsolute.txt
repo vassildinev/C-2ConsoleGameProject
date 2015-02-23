@@ -1,5 +1,0 @@
-C:\Users\Borja_Admin\Documents\GitHub\C-2ConsoleGameProject\bin\Debug\CorrectMario.exe.config
-C:\Users\Borja_Admin\Documents\GitHub\C-2ConsoleGameProject\bin\Debug\CorrectMario.exe
-C:\Users\Borja_Admin\Documents\GitHub\C-2ConsoleGameProject\bin\Debug\CorrectMario.pdb
-C:\Users\Borja_Admin\Documents\GitHub\C-2ConsoleGameProject\obj\Debug\CorrectMario.exe
-C:\Users\Borja_Admin\Documents\GitHub\C-2ConsoleGameProject\obj\Debug\CorrectMario.pdb
