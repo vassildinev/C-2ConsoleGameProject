@@ -1,0 +1,11 @@
+C:\Users\Borja_Admin\Documents\GitHub\C-2ConsoleGameProject\bin\Debug\CorrectMario.exe.config
+C:\Users\Borja_Admin\Documents\GitHub\C-2ConsoleGameProject\bin\Debug\CorrectMario.exe
+C:\Users\Borja_Admin\Documents\GitHub\C-2ConsoleGameProject\bin\Debug\CorrectMario.pdb
+C:\Users\Borja_Admin\Documents\GitHub\C-2ConsoleGameProject\obj\Debug\CorrectMario.exe
+C:\Users\Borja_Admin\Documents\GitHub\C-2ConsoleGameProject\obj\Debug\CorrectMario.pdb
+C:\Users\Koko\Desktop\Mario\C-2ConsoleGameProject-36c8b75a297ec86e9133e05cb2e7478bc2353fd0\bin\Debug\CorrectMario.exe.config
+C:\Users\Koko\Desktop\Mario\C-2ConsoleGameProject-36c8b75a297ec86e9133e05cb2e7478bc2353fd0\bin\Debug\CorrectMario.exe
+C:\Users\Koko\Desktop\Mario\C-2ConsoleGameProject-36c8b75a297ec86e9133e05cb2e7478bc2353fd0\bin\Debug\CorrectMario.pdb
+C:\Users\Koko\Desktop\Mario\C-2ConsoleGameProject-36c8b75a297ec86e9133e05cb2e7478bc2353fd0\obj\Debug\CorrectMario.exe
+C:\Users\Koko\Desktop\Mario\C-2ConsoleGameProject-36c8b75a297ec86e9133e05cb2e7478bc2353fd0\obj\Debug\CorrectMario.pdb
+C:\Users\Koko\Desktop\Mario\C-2ConsoleGameProject-36c8b75a297ec86e9133e05cb2e7478bc2353fd0\obj\Debug\CorrectMario.csprojResolveAssemblyReference.cache
