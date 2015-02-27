@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Enemy.cs" />
     <Compile Include="Levels\Level1.cs" />
+    <Compile Include="Levels\Level2.cs" />
     <Compile Include="Mario.cs" />
     <Compile Include="Particle.cs" />
     <Compile Include="Program.cs" />
