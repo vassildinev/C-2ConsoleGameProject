@@ -9,3 +9,6 @@ C:\Users\Koko\Desktop\Mario\C-2ConsoleGameProject-36c8b75a297ec86e9133e05cb2e747
 C:\Users\Koko\Desktop\Mario\C-2ConsoleGameProject-36c8b75a297ec86e9133e05cb2e7478bc2353fd0\obj\Debug\CorrectMario.exe
 C:\Users\Koko\Desktop\Mario\C-2ConsoleGameProject-36c8b75a297ec86e9133e05cb2e7478bc2353fd0\obj\Debug\CorrectMario.pdb
 C:\Users\Koko\Desktop\Mario\C-2ConsoleGameProject-36c8b75a297ec86e9133e05cb2e7478bc2353fd0\obj\Debug\CorrectMario.csprojResolveAssemblyReference.cache
+C:\Users\Koko\Desktop\C-2ConsoleGameProject\C-2ConsoleGameProject-36c8b75a297ec86e9133e05cb2e7478bc2353fd0\bin\Debug\CorrectMario.exe.config
+C:\Users\Koko\Desktop\C-2ConsoleGameProject\C-2ConsoleGameProject-36c8b75a297ec86e9133e05cb2e7478bc2353fd0\obj\Debug\CorrectMario.exe
+C:\Users\Koko\Desktop\C-2ConsoleGameProject\C-2ConsoleGameProject-36c8b75a297ec86e9133e05cb2e7478bc2353fd0\obj\Debug\CorrectMario.pdb
