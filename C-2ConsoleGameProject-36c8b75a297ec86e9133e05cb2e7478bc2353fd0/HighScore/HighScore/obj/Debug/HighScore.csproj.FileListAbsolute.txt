@@ -1,0 +1,1 @@
+E:\My Documents\Telerik Academy\Programming\C#\TelerikAcademy\CSharp_part2_team_work\HighScore\HighScore\bin\Debug\HighScore.exe.config
