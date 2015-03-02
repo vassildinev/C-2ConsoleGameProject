@@ -8,9 +8,9 @@ namespace HighScore
 
     class HS
     {
-        public const int placesCount = 6;
+        public const int placesCount = 6; //maximum count of places in Highscore list.
 
-        public static int Add(int pts, string name = null) //If name is null or string.Empty - this method will ask for name.
+        public static int Add(int score, string name = null) //If name is null or string.Empty - this method will ask for name.
         {
             if (name == null || name == string.Empty)//ask for name
             {
@@ -32,7 +32,7 @@ namespace HighScore
                 for (int i = 0; i < hslist.Count; i += 2)
                 {
                     int tempL = int.Parse(hslist[i].ToString());
-                    if (tempL <= pts)
+                    if (tempL <= score)
                     {
                         pos = i;
                         break;
@@ -47,19 +47,19 @@ namespace HighScore
             {
                 if (hslist.Count != 0 && hslist[0] != null)
                 {
-                    hslist.Insert((int)pos, pts.ToString());
+                    hslist.Insert((int)pos, score.ToString());
                     hslist.Insert((int)(pos + 1), name);
                 }
                 else
                 {
-                    hslist.Add(pts.ToString());
+                    hslist.Add(score.ToString());
                     hslist.Add(name.ToString());
                 }
             }
             else
             {
                 pos = (hslist.Count);
-                hslist.Add(pts.ToString());
+                hslist.Add(score.ToString());
                 hslist.Add(name.ToString());
             }
 
@@ -81,7 +81,7 @@ namespace HighScore
             }
         }
 
-        public static string PrintPoints_WithPosition(int pos) //result is returned as string!!
+        public static string PrintPoints_WithPosition(int position = -1) //result is returned as string!!
         {
             StringBuilder sb = new StringBuilder();
             var hslist = ReadFromFile_to_List();
@@ -105,7 +105,7 @@ namespace HighScore
             for (int i = 0; i < hslist.Count - 1; i += 2)
             {
                 sb.Append(hslist[i + 1].PadLeft(maxLen, ' ') + " with [" + hslist[i].PadLeft(intLen, ' ') + "] points!");
-                if (i / 2 + 1 == pos) sb.Append(" <-- This is your new highscore!");
+                if (i / 2 + 1 == position) sb.Append(" <-- This is your new highscore!");
                 sb.Append("\n");
             }
             return (sb.ToString());
@@ -135,7 +135,7 @@ namespace HighScore
 
                 streamReader.Close();
             }
-            catch (System.IO.FileNotFoundException)
+            catch (System.IO.FileNotFoundException) // if file not exist - creates one and starts the method again
             {
                 //Console.Error.WriteLine("Can not find file {0}.", fileName);
                 Save(new List<string> { });
