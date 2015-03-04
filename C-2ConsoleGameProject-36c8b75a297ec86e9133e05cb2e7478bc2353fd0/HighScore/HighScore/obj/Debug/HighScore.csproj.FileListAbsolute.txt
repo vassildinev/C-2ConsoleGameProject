@@ -1,0 +1,6 @@
+E:\My Documents\Telerik Academy\Programming\C#\TelerikAcademy\CSharp_part2_team_work\HighScore\HighScore\bin\Debug\HighScore.exe.config
+E:\My Documents\Telerik Academy\Programming\C#\TelerikAcademy\CSharp_part2_team_work\HighScore\HighScore\bin\Debug\HighScore.exe
+E:\My Documents\Telerik Academy\Programming\C#\TelerikAcademy\CSharp_part2_team_work\HighScore\HighScore\bin\Debug\HighScore.pdb
+E:\My Documents\Telerik Academy\Programming\C#\TelerikAcademy\CSharp_part2_team_work\HighScore\HighScore\obj\Debug\HighScore.csprojResolveAssemblyReference.cache
+E:\My Documents\Telerik Academy\Programming\C#\TelerikAcademy\CSharp_part2_team_work\HighScore\HighScore\obj\Debug\HighScore.exe
+E:\My Documents\Telerik Academy\Programming\C#\TelerikAcademy\CSharp_part2_team_work\HighScore\HighScore\obj\Debug\HighScore.pdb
